@@ -1,0 +1,25 @@
+{
+  "name": "iocmd",
+  "version": "1.0.0",
+  "description": "fork of cloudcmd",
+  "main": "lib/iocmd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/iocmd.git"
+  },
+  "keywords": [
+    "iocmd"
+  ],
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderaiser/cloudcmd/issues"
+  },
+  "homepage": "https://github.com/coderaiser/cloudcmd",
+  "dependencies": {
+    "cloudcmd": "~2.0.0"
+  }
+}
