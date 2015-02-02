@@ -1,0 +1,8 @@
+2015.02.02, v0.1.1
+
+fix:
+- (package) rm ","
+
+feature:
+- (iocmd) add bin
+
