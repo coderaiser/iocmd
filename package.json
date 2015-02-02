@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git://github.com/coderaiser/iocmd.git"
   },
+  "bin": {
+    "iocmd": "bin/iocmd.js",
+  },
   "keywords": [
     "iocmd"
   ],
