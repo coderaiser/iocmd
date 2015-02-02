@@ -11,7 +11,7 @@
     "url": "git://github.com/coderaiser/iocmd.git"
   },
   "bin": {
-    "iocmd": "bin/iocmd.js",
+    "iocmd": "bin/iocmd.js"
   },
   "keywords": [
     "iocmd"
