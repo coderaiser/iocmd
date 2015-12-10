@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/coderaiser/cloudcmd",
   "dependencies": {
-    "cloudcmd": "~3.4.0",
+    "cloudcmd": "^5.0.3",
     "express": "~4.13.0",
     "socket.io": "~1.3.5"
   }
