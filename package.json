@@ -19,12 +19,21 @@
   "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coderaiser/cloudcmd/issues"
+    "url": "https://github.com/coderaiser/iocmd/issues"
   },
-  "homepage": "https://github.com/coderaiser/cloudcmd",
+  "homepage": "https://github.com/coderaiser/iocmd",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "cloudcmd": "^5.0.3",
-    "express": "~4.13.0",
-    "socket.io": "~1.3.5"
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.3",
+    "express-session": "^1.13.0",
+    "os-homedir": "^1.0.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "readjson": "^1.1.3",
+    "socket.io": "~1.3.5",
+    "try-catch": "^1.0.0"
   }
 }
