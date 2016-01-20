@@ -23,8 +23,9 @@ let path            = require('path'),
     config          = readconfig();
 
 const PORT          = process.env.IOCMD_PORT || 8000;
-const DIR           = path.join(__dirname, '..');
-const loginPage     = path.join(DIR, 'html/login.html');
+const pagesDir      = path.join(__dirname, '..', 'pages');
+const loginDir      = path.join(pagesDir, 'login');
+const loginPage     = path.join(loginDir, 'login.html');
 
 passport.use(new LocalStrategy((username, password, done) => {
     let isUsername = username === config.username;
@@ -53,6 +54,8 @@ let auth = passport.authenticate('local', {
     failureRedirect: '/login',
     failureFlash: true
 });
+
+app.use(express.static(pagesDir));
 
 if (config.auth) {
     app.use(flash());
@@ -86,12 +89,10 @@ let check = (req, res, next) => {
     req.isAuthenticated() ? next() : res.redirect('/login');
 };
 
-//app.use([check, serveIndex(DIR), express.static(DIR)]);
-
 server = http.createServer(app);
 socket = io.listen(server);
 
-app.use([check, cloudcmd({
+app.use('/', [check, cloudcmd({
     socket: socket,
     config: {
         prefix: '/iocmd',
