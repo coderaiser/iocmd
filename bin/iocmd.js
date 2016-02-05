@@ -57,21 +57,19 @@ let auth = passport.authenticate('local', {
 
 app.use(express.static(pagesDir));
 
-if (config.auth) {
-    app.use(flash());
-    app.use(cookieParser());
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: false }));
-    
-    app.use(session({
-        resave: false,
-        saveUninitialized: false,
-        secret: 'keyboard cat'
-    }));
-    
-    app.use(passport.initialize());
-    app.use(passport.session());
-}
+app.use(flash());
+app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(session({
+    resave: false,
+    saveUninitialized: false,
+    secret: 'keyboard cat'
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get('/login', (req, res) => {
     console.log(req.flash('error'));
