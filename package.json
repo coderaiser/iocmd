@@ -1,6 +1,6 @@
 {
   "name": "iocmd",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "fork of cloudcmd",
   "main": "lib/iocmd.js",
   "scripts": {
