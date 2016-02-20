@@ -88,7 +88,9 @@ let check = (req, res, next) => {
 };
 
 server = http.createServer(app);
-socket = io.listen(server);
+socket = io.listen(server, {
+    path: '/iocmd/socket.io'
+});
 
 app.use('/', [check, cloudcmd({
     socket: socket,
